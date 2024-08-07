@@ -79,13 +79,13 @@ public class TestBuggyAList {
                 if(L.size()>0 && M.size()>0){
                     L.removeLast();
                     M.removeLast();
-                    int [] a=new int [M.size()-1];
-                    int [] b=new int [L.size()-1];
-                    for(int j=0;j<M.size()-1;j+=1){
+                    int [] a=new int [M.size()];
+                    int [] b=new int [L.size()];
+                    for(int j=0;j<M.size();j+=1){
                         a[j]=M.get(j);
                     }
-                    for(int c=0;c<L.size()-1;c+=1){
-                        b[i]=L.get(i);
+                    for(int c=0;c<L.size();c+=1){
+                        b[c]=L.get(c);
                     }
                     assertArrayEquals(a,b);
                 }
