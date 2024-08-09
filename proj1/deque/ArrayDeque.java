@@ -1,11 +1,12 @@
 package deque;
-public class ArrayDeque<Item> {
+public  class ArrayDeque<Item> implements Deque<Item>  {
+
     private Item[] items;
     private int size;
     private int start;
     private int end;
     private int capacity;
-    public ArrayDeque(){
+     public ArrayDeque(){
         capacity=8;
         items=(Item []) new Object[capacity];
         start=0;
@@ -22,6 +23,7 @@ public class ArrayDeque<Item> {
         end=size;
         capacity=newCapacity;
     }
+    @Override
     public void addFirst (Item item){
         if(size==capacity){
             resize(capacity*2);
@@ -30,6 +32,7 @@ public class ArrayDeque<Item> {
         items[start]=item;
         size+=1;
     }
+    @Override
     public void addLast(Item item){
         if(size==capacity){
             resize(capacity*2);
@@ -38,20 +41,29 @@ public class ArrayDeque<Item> {
         end=(end+1)%capacity;
         size+=1;
     }
+
+    /**
+     *
+     * @override
+     */
+    @Override
     public boolean isEmpty(){
         if(size==0){
             return true;
         }
         return false;
     }
+    @Override
     public int size(){
         return size;
     }
+    @Override
     public void printDeque(){
         for(int i=0;i<size;i+=1){
             System.out.println(items[(start+i)%capacity]);
         }
     }
+    @Override
     public Item removeFirst(){
         if(isEmpty()){
             return null;
@@ -66,6 +78,7 @@ public class ArrayDeque<Item> {
             return x;
         }
     }
+    @Override
     public Item removeLast(){
         if(isEmpty()) {
             return null;
@@ -82,6 +95,7 @@ public class ArrayDeque<Item> {
 
     }
   }
+  @Override
   public Item get(int index){
    if(index>=size||index<0){
        return null;
