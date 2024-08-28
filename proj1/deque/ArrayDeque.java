@@ -13,7 +13,7 @@ public  class ArrayDeque<Item> implements Deque<Item>  {
         end=0;
         size=0;
     }
-    private void resize(int newCapacity){
+    public void resize(int newCapacity){
         Item [] newArray=(Item[]) new Object[newCapacity];
         for (int i=0;i<size;i+=1){
             newArray[i]=items[(start+i)%capacity];
@@ -88,7 +88,7 @@ public  class ArrayDeque<Item> implements Deque<Item>  {
             Item x=items[end];
             items[end]=null;
                 size-=1;
-                if(size>0&&size<=capacity/4){
+                if(size>0&&size<capacity/4+1){
                     resize(capacity/2);
             }
                 return x;
@@ -101,6 +101,9 @@ public  class ArrayDeque<Item> implements Deque<Item>  {
        return null;
    }
    return items[(start+index)%capacity];
+  }
+  public void sizeclear(){
+        size=0;
   }
 }
 
