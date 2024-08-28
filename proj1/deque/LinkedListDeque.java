@@ -1,11 +1,11 @@
 package deque;
 
-public class LinkedListDeque <Item> implements Deque<Item>{
+public class LinkedListDeque <T> implements Deque<T>{
     private class IntNode{
-        public Item item;
+        public T item;
         public IntNode next;
         public IntNode before;
-        public  IntNode(Item i,IntNode n,IntNode m){
+        public  IntNode(T i,IntNode n,IntNode m){
             item=i;
             next=n;
             before=m;
@@ -23,7 +23,7 @@ public class LinkedListDeque <Item> implements Deque<Item>{
         endSentinel.before=startSentinel;
         size=0;
     }
-    public  LinkedListDeque(Item x){
+    public  LinkedListDeque(T x){
       this();
        startSentinel.next=new IntNode(x,endSentinel, startSentinel);
        size=1;
@@ -37,17 +37,17 @@ public class LinkedListDeque <Item> implements Deque<Item>{
         return endSentinel;
     }
 @Override
-    public void addFirst(Item x){
+    public void addFirst(T x){
         IntNode t=startSentinel.next;
         startSentinel.next=new IntNode(x,t,startSentinel);
         t.before=startSentinel.next;
         size+=1;
     }
-    public Item getFirst(){
+    public T getFirst(){
         return (startSentinel.next.item);
     }
     @Override
-    public void addLast(Item x){
+    public void addLast(T x){
         IntNode p=endSentinel.before;
         IntNode q=new IntNode(x,endSentinel,p);
         p.next=q;
@@ -55,14 +55,14 @@ public class LinkedListDeque <Item> implements Deque<Item>{
         size+=1;
     }
     @Override
-    public Item removeLast(){
+    public T removeLast(){
         if(size==0)
         {
             return null;
         }
         IntNode p=endSentinel.before;
         if(p!=null) {
-            Item remove = p.item;
+            T remove = p.item;
             p.before.next = endSentinel;
             endSentinel.before = p.before;
             p.next = null;
@@ -81,7 +81,7 @@ public class LinkedListDeque <Item> implements Deque<Item>{
         return false;
     }*/
     @Override
-    public Item removeFirst(){
+    public T removeFirst(){
         IntNode x=startSentinel.next;
         if(size==0)
         {
@@ -91,7 +91,7 @@ public class LinkedListDeque <Item> implements Deque<Item>{
             return null;
         }
         else{
-            Item remove=x.item;
+            T remove=x.item;
         startSentinel.next=x.next;
         if(x.next!=null) {
             x.next.before=startSentinel;
@@ -106,7 +106,7 @@ public class LinkedListDeque <Item> implements Deque<Item>{
     public int size(){
         return size;
     }
-    public Item getRecursive(int index){
+    public T getRecursive(int index){
 
         int i=0;
         IntNode p;
@@ -121,7 +121,7 @@ public class LinkedListDeque <Item> implements Deque<Item>{
             return p.item;
     }
     @Override
-    public Item get(int index){
+    public T get(int index){
         int i=0;
         IntNode p;
         p=startSentinel.next;
