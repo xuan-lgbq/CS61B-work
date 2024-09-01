@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0f5f503-733d-4acf-928e-208c2b768e7e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/proj1/deque/ArrayDeque.java" beforeDir="false" afterPath="$PROJECT_DIR$/proj1/deque/ArrayDeque.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proj1/gh2/GuitarString.java" beforeDir="false" afterPath="$PROJECT_DIR$/proj1/gh2/GuitarString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proj1/target/classes/deque/ArrayDeque.class" beforeDir="false" afterPath="$PROJECT_DIR$/proj1/target/classes/deque/ArrayDeque.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proj1/target/classes/deque/LinkedListDeque.class" beforeDir="false" afterPath="$PROJECT_DIR$/proj1/target/classes/deque/LinkedListDeque.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proj1/target/classes/gh2/GuitarString.class" beforeDir="false" afterPath="$PROJECT_DIR$/proj1/target/classes/gh2/GuitarString.class" afterDir="false" />
-    </list>
+    <list default="true" id="d0f5f503-733d-4acf-928e-208c2b768e7e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,23 +31,23 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2lIPjp4czcYhqrnWL2zKFLpc210" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "kotlin-language-version-configured": "true",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
@@ -109,6 +103,7 @@
       <option name="presentableId" value="Default" />
       <updated>1724864754652</updated>
       <workItem from="1724864755828" duration="1000" />
+      <workItem from="1725182238538" duration="1000" />
     </task>
     <servers />
   </component>
